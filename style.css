@@ -1,0 +1,251 @@
+/* Враховуємо внутрішні відступи та рамки в розмірах елементів */
+* {
+    box-sizing: border-box;
+}
+
+/* Основне оформлення сторінки */
+body {
+    margin: 0;
+        font-family: "Inter", Arial, sans-serif;
+    color: #302b27;
+    background-color: #fff8f0;
+}
+
+/* Шапка сайту */
+header {
+    padding: 20px 5%;
+    background-color: #ffffff;
+}
+
+/* Відступи головного екрана та тематичних секцій */
+.hero,
+section {
+    padding: 40px 5%;
+}
+
+/* Прибираємо верхній відступ заголовків */
+h1,
+h2,
+h3 {
+    margin-top: 0;
+}
+
+/* Відстань між рядками тексту */
+p {
+    line-height: 1.5;
+}
+
+/* Підвал сайту */
+footer {
+    padding: 20px 5%;
+    color: #ffffff;
+    background-color: #302b27;
+}
+
+/* Розташування елементів шапки в один рядок */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Посилання в шапці */
+header a {
+    color: #302b27;
+    text-decoration: none;
+}
+
+/* Текстовий логотип */
+header > a:first-child {
+    color: #c9472b;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Розташування пунктів навігації */
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+/* Оформлення посилання «Замовити» як кнопки */
+header > a:last-child {
+    padding: 10px 24px;
+    color: #ffffff;
+    background-color: #c9472b;
+    border-radius: 8px;
+}
+
+/* Розташування елементів головного екрана */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Ширина текстового блоку */
+.hero > div {
+    max-width: 550px;
+}
+
+/* Головний заголовок */
+h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+/* Опис під головним заголовком */
+.hero p {
+    margin-bottom: 24px;
+}
+
+/* Посилання «Переглянути меню» у вигляді кнопки */
+.hero a {
+    display: inline-block;
+    padding: 12px 24px;
+    color: #ffffff;
+    background-color: #c9472b;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* Заголовки тематичних секцій */
+h2 {
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+/* Картки та стрілки розташовуються в один рядок */
+.pizza-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Ряд карток піц */
+.pizza-list {
+    display: flex;
+    gap: 24px;
+    flex: 1;
+}
+
+/* Однакові розміри карток */
+.pizza-card {
+    flex: 1;
+    text-align: center;
+}
+
+/* Назви піц */
+.pizza-card h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+/* Склад піц */
+.pizza-card p {
+    color: #70675f;
+    font-size: 14px;
+}
+
+/* Кнопки з цінами */
+.pizza-card button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #c9472b;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Кнопки зі стрілками */
+#prev-pizza,
+#next-pizza {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: #c9472b;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+/* Розмір зображення на головному екрані */
+.hero > img {
+    width: 35%;
+    max-width: 400px;
+    height: auto;
+}
+
+/* Розміри зображень піц */
+.pizza-card img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Оформлення для екранів завширшки до 768 пікселів */
+@media screen and (max-width: 768px) {
+
+    /* Елементи шапки розташовуються один під одним */
+    header {
+        flex-direction: column;
+    }
+
+    /* Пункти навігації можуть переноситися на новий рядок */
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    /* Текст і зображення головного екрана розташовуються вертикально */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Зменшуємо головний заголовок */
+    h1 {
+        font-size: 32px;
+    }
+
+    /* Збільшуємо відносну ширину зображення */
+    .hero > img {
+        width: 80%;
+    }
+
+    /* Картки піц розташовуються одна під одною */
+    .pizza-list {
+        flex-direction: column;
+    }
+
+    /* Зменшуємо відстань між стрілками та картками */
+    .pizza-menu {
+        gap: 8px;
+    }
+
+    /* Зменшуємо заголовки секцій */
+    h2 {
+        font-size: 28px;
+    }
+}
+
+/* Кнопки використовують той самий шрифт, що й сторінка */
+button {
+    font-family: inherit;
+}
+
+/* Карта в розділі контактів */
+.map {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    margin-top: 24px;
+    border: none;
+}

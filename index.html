@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <!-- Кодування для правильного відображення українського тексту -->
+    <meta charset="UTF-8">
+
+    <!-- Налаштування відображення на екранах різної ширини -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Назва вкладки браузера -->
+    <title>YummyPizza — сайт піцерії</title>
+
+    <!-- Підключення шрифту Inter -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+
+    <!-- Підключення зовнішнього файлу стилів -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Шапка сайту: логотип, навігація та кнопка «Замовити» -->
+    <header>
+                <!-- Назва піцерії -->
+        <a href="index.html">YummyPizza</a>
+
+        <!-- Навігація до розділів сторінки -->
+        <nav>
+            <a href="#menu">Меню</a>
+            <a href="#about">Про нас</a>
+            <a href="#delivery">Доставка та оплата</a>
+            <a href="#contacts">Контакти</a>
+        </nav>
+
+        <!-- Перехід до вибору піци -->
+        <a href="#menu">Замовити</a>
+    </header>
+
+    <!-- Основний вміст сайту -->
+    <main>
+                <!-- Головний екран сайту -->
+        <div class="hero">
+
+            <!-- Заголовок, короткий опис і перехід до меню -->
+            <div>
+                <h1>Гаряча піца — щасливі моменти!</h1>
+
+                <p>
+                    Свіже тісто, щедра начинка та любов у кожному шматочку.
+                    Обирай улюблену піцу — ми приготуємо й доставимо!
+                </p>
+
+                <a href="#menu">Переглянути меню</a>
+            </div>
+            <!-- Зображення на головному екрані -->
+            <img src="img/logo.png" alt="Логотип піцерії YummyPizza">
+        </div>
+                <!-- Розділ із меню піц -->
+        <section id="menu">
+            <h2>Наше меню</h2>
+
+            <div class="pizza-menu">
+
+                <!-- Кнопка перемикання назад -->
+                <button type="button" id="prev-pizza"
+                        aria-label="Попередня піца">◀</button>
+
+                <!-- Картки піц -->
+                <div class="pizza-list">
+
+                    <div class="pizza-card">
+                                                <!-- Зображення піци «Маргарита» -->
+                        <img src="img/margherita.png" alt="Піца Маргарита">
+                        <h3>Маргарита</h3>
+                        <p>Томатний соус, моцарела, свіжий базилік</p>
+                        <!-- Кнопка в картці «Маргарита» -->
+                        <button type="button" id="order-margherita">189 грн.</button>
+                    </div>
+
+                    <div class="pizza-card">
+                                                <!-- Зображення піци «Пепероні» -->
+                        <img src="img/pepperoni.png" alt="Піца Пепероні">
+                        <h3>Пепероні</h3>
+                        <p>Томатний соус, моцарела, пепероні</p>
+                        <!-- Кнопка в картці «Пепероні» -->
+                        <button type="button" id="order-pepperoni">229 грн.</button>
+                    </div>
+
+                    <div class="pizza-card">
+                                                <!-- Зображення піци «Чотири сири» -->
+                        <img src="img/four-cheese.png" alt="Піца Чотири сири">
+                        <h3>Чотири сири</h3>
+                        <p>Моцарела, горгонзола, пармезан, чедер</p>
+                        <!-- Кнопка в картці «Чотири сири» -->
+                        <button type="button" id="order-four-cheese">249 грн.</button>
+                    </div>
+
+                </div>
+
+                <!-- Кнопка перемикання вперед -->
+                <button type="button" id="next-pizza"
+                        aria-label="Наступна піца">▶</button>
+
+            </div>
+        </section>
+                <!-- Інформація про піцерію -->
+        <section id="about">
+            <h2>Про YummyPizza</h2>
+
+            <p>
+                У YummyPizza ми готуємо піцу, яку хочеться розділити з друзями.
+                Замішуємо свіже тісто, додаємо щедру начинку та випікаємо
+                до золотистої скоринки. Наша головна складова — любов до піци!
+            </p>
+        </section>
+                <!-- Умови доставки та способи оплати -->
+        <section id="delivery">
+            <h2>Доставка та оплата</h2>
+
+            <p>
+                Доставляємо щодня з 10:00 до 22:00.<br>
+                Орієнтовний час доставки — 40–60 хвилин.<br>
+                Вартість доставки — 60 грн, від 500 грн — безкоштовно.<br>
+                Оплата карткою або готівкою при отриманні.
+            </p>
+        </section>
+
+                <!-- Контактна інформація піцерії -->
+        <section id="contacts">
+            <h2>Контакти</h2>
+
+            <p>
+                Телефон: +380 XX XXX XX XX<br>
+                Адреса: м. Харків, вул. Затишна, 12<br>
+                Працюємо щодня: 10:00–22:00
+            </p>
+
+                <!-- Карта через Google Maps Embed API -->
+            <iframe
+                class="map"
+                title="Карта Харкова"
+                width="600"
+                height="300"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD9sptsuQety7vleWj-8gTGBtAGgx-69Ns&amp;q=Харків,Україна">
+            </iframe>
+        </section>
+    </main>
+
+    <!-- Підвал сайту -->
+    <footer>
+                <!-- Назва піцерії та позначення навчального макета -->
+        <p>YummyPizza</p>
+        <p>Навчальний макет • YummyPizza • 2026</p>
+    </footer>
+
+    <!-- Підключення зовнішнього файлу JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
